@@ -2,18 +2,17 @@ package middleware
 
 import (
 	"github.com/startracex/goup"
-	"github.com/startracex/goup/toolkit"
 	"log"
 )
 
-var DefaultCors = toolkit.Cors{
+var DefaultCors = goup.CorsConfig{
 	AllowOrigin:  []string{"*"},
 	AllowMethod:  []string{"*"},
 	AllowHeaders: []string{"*"},
 }
 
 // SetCors added in new version
-func SetCors(c toolkit.Cors) goup.HandlerFunc {
+func SetCors(c goup.CorsConfig) goup.HandlerFunc {
 	return goup.SetCors(c)
 }
 
