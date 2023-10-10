@@ -51,4 +51,4 @@ Parameter:
 
  - Header:
 
-    - Token: `${emporary token}` or Authorization: `Bearer ${json web token}`
+    - Token: `${temporary token}` or Authorization: `Bearer ${json web token}`
