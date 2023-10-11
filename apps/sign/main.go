@@ -12,13 +12,13 @@ func main() {
 	fmt.Printf("goup@%s: ", goup.Version)
 	engine := goup.New()
 	engine.Use(middleware.Recovery(), middleware.SetCors(middleware.DefaultCors))
-	engine.GET("/", func(request goup.Request, response goup.Response) {
-		panic("p")
-		str := "Hello, World!\n"
-		fmt.Fprint(response.Writer, str)
-		response.Write([]byte(str))
-		response.String(str)
-	})
+	engine.LoadHTMLFiles("./client/index.html")
+	for _, pattern := range []string{"/", "login", "/signup", "/aith"} {
+		engine.GET(pattern, func(request goup.Request, response goup.Response) {
+			response.HTML("index.html", nil)
+		})
+	}
+	engine.Public("/public", "./client/public")
 	router.Init(engine)
 	var err error
 	if conf.TLS {
