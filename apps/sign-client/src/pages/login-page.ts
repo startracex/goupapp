@@ -1,5 +1,5 @@
 import { staticStyles } from "../styles/static";
-import origin from "../lib/origin"
+import origin from "../lib/origin";
 import { testEmail, testPassword } from "../lib/vaild";
 import { sha1 } from "../lib/crypto";
 import { BaseForm, RouteView } from "godown";
@@ -34,13 +34,14 @@ export class LoginPage extends LitElement {
         const { token } = data;
         localStorage.setItem("TOKEN", token);
         const callbackURL = new URLSearchParams(window.location.search).get(
-          "callback_url",
+          "callback_url"
         );
         if (callbackURL) {
           history.pushState(null, "", "/auth" + window.location.search);
           RouteView.updateAll();
         }
-      });
+      })
+      .catch(() => {});
   }
   protected render() {
     return html`
