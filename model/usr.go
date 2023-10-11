@@ -20,12 +20,12 @@ func (u *UserLogin) CheckEmail() bool {
 }
 
 func (u *UserLogin) CheckPassword() bool {
-	return utils.CheckPassword(u.Email)
+	return utils.CheckPassword(u.Password)
 }
 
 func BindUserLoginInput(req goup.Request) (*UserLogin, bool) {
 	data := &UserLogin{}
-	err := req.JSON(&data)
+	err := req.JSON(data)
 	if err != nil {
 		return nil, false
 	}
