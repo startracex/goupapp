@@ -2,7 +2,7 @@ package database
 
 import (
 	"fmt"
-	"goupapp/lib/db"
+	"goupapp/pkg/db"
 )
 
 var RedisTokenMap = db.NewRedisInstance()

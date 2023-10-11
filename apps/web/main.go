@@ -5,7 +5,7 @@ import (
 	"github.com/startracex/goup"
 	"github.com/startracex/goup/toolkit"
 	"goupapp/apps/web/conf"
-	"goupapp/middleware"
+	"goupapp/pkg/middleware"
 )
 
 func main() {
