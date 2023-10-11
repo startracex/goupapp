@@ -5,7 +5,6 @@
   "author": "startracex",
   "license": "MIT",
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "apps/*"
   ]
 }
