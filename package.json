@@ -1,0 +1,11 @@
+{
+  "name": "goupapp",
+  "version": "0.0.0",
+  "private": true,
+  "author": "startracex",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
