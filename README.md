@@ -9,7 +9,8 @@ The Goupapp is a goup-integrated app group launcher
 ```text
 ├─apps
 │  └─* All applications
-└─* Share code
+└─internal
+  └─* Internal code
 -go.mod
 -go.work
 ```
@@ -19,3 +20,5 @@ The Goupapp is a goup-integrated app group launcher
 * apps/web: simple web app starter
 
 * apps/sign: auth service example
+
+* apps/sign-client: auth client example
