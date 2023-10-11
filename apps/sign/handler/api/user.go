@@ -4,9 +4,9 @@ import (
 	"github.com/startracex/goup"
 	"goupapp/apps/sign/conf"
 	"goupapp/apps/sign/database"
-	"goupapp/pkg/db"
-	"goupapp/pkg/jwt"
-	"goupapp/pkg/utils"
+	"goupapp/internal/db"
+	"goupapp/internal/jwt"
+	"goupapp/internal/utils"
 )
 
 func User(req goup.Request, res goup.Response) {

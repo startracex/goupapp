@@ -2,7 +2,7 @@ package model
 
 import (
 	"github.com/startracex/goup"
-	"goupapp/pkg/utils"
+	"goupapp/internal/utils"
 	"strings"
 )
 
