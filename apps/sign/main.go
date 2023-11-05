@@ -13,9 +13,9 @@ func main() {
 	engine := goup.New()
 	engine.Use(middleware.Recovery(), middleware.SetCors(middleware.DefaultCors))
 	engine.LoadHTMLFiles("./client/index.html")
-	for _, pattern := range []string{"/", "login", "/signup", "/aith"} {
+	for _, pattern := range []string{"/", "login", "/signup", "/auth"} {
 		engine.GET(pattern, func(request goup.Request, response goup.Response) {
-			response.HTML("index.html", nil)
+			_ = response.HTML("index.html", nil)
 		})
 	}
 	engine.Public("/public", "./client/public")

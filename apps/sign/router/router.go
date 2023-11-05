@@ -15,7 +15,6 @@ func Init(engine *goup.Engine) {
 	engine.POST("/login", handler.Login)
 	engine.POST("/auth", handler.Auth)
 
-	engine.GET("/api", apiwap)
 	api := engine.Group("/api", middleware.Cors())
 	ApiRoute(api)
 }
